@@ -15,9 +15,7 @@ public class UserController {
     private UserRepository repository;
 
     @GetMapping
-    public List<User> findAll() {
-        return repository.findAll();
-    }
+    public List<User> findAll() { return repository.findAll(); }
 
     @GetMapping(value = "/{id}")
     public User findById(@PathVariable Long id) {
@@ -25,7 +23,5 @@ public class UserController {
     }
 
     @PostMapping
-    public User insert(@RequestBody User user) {
-        return repository.save(user);
-    }
+    public User insert(@RequestBody User user) { return repository.save(user); }
 }
